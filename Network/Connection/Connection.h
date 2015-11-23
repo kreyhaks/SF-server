@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace net
+namespace Network
 {
 
     class Connection
@@ -19,6 +19,7 @@ namespace net
 
         qintptr id() const;
         QIODevice *device() const;
+        void write(const QByteArray& packet) const;
         void close();
 
     private:

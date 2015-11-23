@@ -1,7 +1,9 @@
 #pragma once
 
 
-namespace net
+#include <QSharedPointer>
+
+namespace Network
 {
 
     class Connection;
@@ -10,6 +12,8 @@ namespace net
         : public QObject
     {
         Q_OBJECT
+
+        friend class QSharedPointer<Server>;
 
     signals:
         void newConnection();
@@ -32,5 +36,7 @@ namespace net
         QList<Connection *> _freeConnections;
         QMutex _locker;
     };
+
+    typedef QSharedPointer<Server> ServerShp;
 
 }

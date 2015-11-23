@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace net
+namespace Network
 {
     class Server;
 }
@@ -37,7 +37,7 @@ namespace core
         void close();
 
     private:
-        QSharedPointer<net::Server> _server;
+        QSharedPointer<Network::Server> _server;
 //        QSharedPointer< UserManager > _userManager;
 //        QSharedPointer< Balancer > _balancer;
 //        QSharedPointer< ThreadPool > _threadPool;

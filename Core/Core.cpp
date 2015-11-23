@@ -28,7 +28,7 @@ namespace core
         : _isInitialized(false)
     {
         // Direct initialization order
-        _server = QSharedPointer<net::Server>::create();
+        _server = QSharedPointer<Network::Server>::create();
 //        _threadPool = QSharedPointer< ThreadPool >::create( 0 );
 //        _balancer = QSharedPointer< Balancer >::create( _threadPool );
 //        _dbManager = QSharedPointer< DBManager >::create();
